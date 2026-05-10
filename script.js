@@ -58,11 +58,25 @@ let additionalSpace = totalPlants*minSpace
 console.log(additionalSpace);
 
 //Based on radius = square root of 81920/PI
+
 radius = (additionalSpace/PI)**.5;
 console.log(radius);
 
+//Part 3: Throw and catch error-handling block
 
-// The area is starting with 20 plants.
-// The plants double in number every week.
-// If start with 100 plants and do not prune for 10 weeks,
-// how big does garden need to be
+radius = 5
+weeks = 1
+totalPlants = 100
+console.log(totalPlants)
+console.log(capacity);
+
+try {
+    if (totalPlants > capacity) {
+        console.log("Exceeded");
+    } else {
+        throw "You have exceeded the capacity";
+    }
+} catch (error) {
+    console.log(error);
+}
+console.log("You're program is still running");
