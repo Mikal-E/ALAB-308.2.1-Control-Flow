@@ -1,6 +1,3 @@
-console.log("Test")
-
-
 let plants = 20;
 let radius = 5
 let weeks = 1
@@ -9,15 +6,12 @@ let totalPlants = plants*2**weeks
 console.log(radius);
 const PI = 3.1415;
 const area = PI * radius * radius;
-
 console.log(area);
 
 const minSpace = .8;
-
 const capacity = area/minSpace
 
 console.log(capacity);
-
 console.log(capacity*.8)
 
 if (totalPlants > capacity*.8){
@@ -53,6 +47,8 @@ else {
     console.log("Plant");
 }
 
+//Part 2: 100 plants not pruned for 10 weeks
+
 plants = 100
 weeks = 10
 totalPlants = plants*2**weeks
@@ -60,6 +56,11 @@ totalPlants = plants*2**weeks
 console.log(totalPlants);
 let additionalSpace = totalPlants*minSpace
 console.log(additionalSpace);
+
+//Based on radius = square root of 81920/PI
+radius = (additionalSpace/PI)**.5;
+console.log(radius);
+
 
 // The area is starting with 20 plants.
 // The plants double in number every week.
